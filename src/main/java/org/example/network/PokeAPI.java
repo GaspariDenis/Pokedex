@@ -45,7 +45,7 @@ public class PokeAPI {
             throw new PokeAPIException("PokeAPI", e.getMessage());
         }
 
-        if (response.statusCode() < 200 && response.statusCode() > 300) {
+        if (response.statusCode() < 200 || response.statusCode() > 300) {
             throw new PokeAPIException("PokeAPI", response.statusCode() + ": " + response.body());
         }
         return response.body();

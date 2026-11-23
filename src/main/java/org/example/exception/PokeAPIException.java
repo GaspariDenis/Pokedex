@@ -6,6 +6,7 @@ import org.slf4j.LoggerFactory;
 public class PokeAPIException extends RuntimeException {
     public PokeAPIException(String pack, String message) {
         Logger log = LoggerFactory.getLogger(pack);
+        log.error(message);
         super(message);
     }
 }

@@ -8,6 +8,6 @@ void main() {
     PokeAPI api = PokeAPI.getInstance();
 
     try {
-        println(api.getPokemon("litten"));
+        println(api.getPokemon("a"));
     }catch(PokeAPIException _){}
 }
